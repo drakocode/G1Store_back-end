@@ -1,4 +1,4 @@
-package com.grupo1.g1store.model;
+package com.G1Store.G1Store.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -21,7 +21,7 @@ public class Produto {
     private String descricao;
 
     @Size(min = 3, max = 255)
-    private String image;
+    private String imagem;
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")
@@ -30,11 +30,11 @@ public class Produto {
     //constructor
     //
     //
-    public Produto(String nome, Double preco, String descricao, String image, Categoria categoria) {
+    public Produto(String nome, Double preco, String descricao, String imagem, Categoria categoria) {
         this.nome = nome;
         this.preco = preco;
         this.descricao = descricao;
-        this.image = image;
+        this.imagem = imagem;
         this.categoria = categoria;
     }
 
@@ -74,12 +74,12 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public String getImage() {
-        return image;
+    public String getImagem() {
+        return imagem;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     public Categoria getCategoria() {

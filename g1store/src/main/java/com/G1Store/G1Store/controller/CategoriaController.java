@@ -1,7 +1,7 @@
-package com.grupo1.g1store.controller;
+package com.G1Store.G1Store.controller;
 
-import com.grupo1.g1store.model.Categoria;
-import com.grupo1.g1store.service.CategoriaService;
+import com.G1Store.G1Store.model.Categoria;
+import com.G1Store.G1Store.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

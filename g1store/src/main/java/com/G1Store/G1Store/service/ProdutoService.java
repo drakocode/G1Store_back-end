@@ -1,7 +1,7 @@
-package com.grupo1.g1store.service;
+package com.G1Store.G1Store.service;
 
-import com.grupo1.g1store.model.Produto;
-import com.grupo1.g1store.repository.ProdutoRepository;
+import com.G1Store.G1Store.model.Produto;
+import com.G1Store.G1Store.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -18,6 +18,10 @@ public class ProdutoService {
         this.produtoRepository = produtoRepository;
     }
 
+    public ProdutoService() {
+
+    }
+
     //methods
     //
     //
@@ -28,4 +32,5 @@ public class ProdutoService {
     public Produto buscarDadosDoProdutoPorId(Long id){
         return produtoRepository.getById(id);
     }
+
 }

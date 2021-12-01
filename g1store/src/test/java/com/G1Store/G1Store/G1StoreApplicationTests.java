@@ -1,10 +1,10 @@
-package com.grupo1.g1store;
+package com.G1Store.G1Store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class G1storeApplicationTests {
+class G1StoreApplicationTests {
 
 	@Test
 	void contextLoads() {

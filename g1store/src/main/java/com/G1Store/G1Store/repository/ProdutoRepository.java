@@ -1,6 +1,6 @@
-package com.grupo1.g1store.repository;
+package com.G1Store.G1Store.repository;
 
-import com.grupo1.g1store.model.Produto;
+import com.G1Store.G1Store.model.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {

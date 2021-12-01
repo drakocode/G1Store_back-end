@@ -1,4 +1,4 @@
-package com.grupo1.g1store.model;
+package com.G1Store.G1Store.model;
 
 
 import javax.persistence.*;
@@ -15,4 +15,10 @@ public class Categoria {
     @Size(min = 3, max = 255)
     private String nome;
 
+    //constructor
+    //
+    //
+    public Categoria(String nome) {
+        this.nome = nome;
+    }
 }

@@ -1,7 +1,7 @@
-package com.grupo1.g1store.service;
+package com.G1Store.G1Store.service;
 
-import com.grupo1.g1store.model.Categoria;
-import com.grupo1.g1store.repository.CategoriaRepository;
+import com.G1Store.G1Store.model.Categoria;
+import com.G1Store.G1Store.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
