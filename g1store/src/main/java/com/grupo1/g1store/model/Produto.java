@@ -23,10 +23,13 @@ public class Produto {
     @Size(min = 3, max = 255)
     private String image;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
+    //constructor
+    //
+    //
     public Produto(String nome, Double preco, String descricao, String image, Categoria categoria) {
         this.nome = nome;
         this.preco = preco;
@@ -35,6 +38,10 @@ public class Produto {
         this.categoria = categoria;
     }
 
+
+    //getters&setters
+    //
+    //
     public Long getId() {
         return id;
     }
