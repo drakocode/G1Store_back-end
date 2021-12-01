@@ -23,8 +23,8 @@ public class G1StoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(G1StoreApplication.class, args);
 		//
-		Categoria nuclear=new Categoria("Nuclear");
-		Categoria isotopo=new Categoria("Isotopo");
+		Categoria nuclear = new Categoria("Nuclear");
+		Categoria isotopo = new Categoria("Isotopo");
 
 
 

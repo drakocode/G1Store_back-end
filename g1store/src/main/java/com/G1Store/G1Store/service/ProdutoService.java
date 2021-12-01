@@ -33,4 +33,7 @@ public class ProdutoService {
         return produtoRepository.getById(id);
     }
 
+    public Produto cadastrar(Produto produto) {
+        return produtoRepository.save(produto);
+    }
 }
