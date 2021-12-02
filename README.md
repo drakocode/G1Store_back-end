@@ -9,4 +9,9 @@ obs: discutir algumas classes possiveis de serem excluidas/alteradas/melhoradas
 	<p>aplication.properties: deve ter algo ali, mas não me lembro oque</p></br>
 	<p>model Categoria: talvez precise dos constructors(vazio, sem id e com id) e dos setters e getters</p></br>
 	<p>pom: coloquei jdbc não sei se precisa kk</p></br>
-	<p>CategoriaService: não decidi bem sobre como fazer o metodo de disponibilizar os produtos de uma determinada categoria</p>
+	<p>CategoriaService: não decidi bem sobre como fazer o metodo de disponibilizar os produtos de uma determinada categoria</p></br>
+	<p></p></br>
+	<p>Adicionei 2 dependencias do hibernate</p></br>
+	<p>Faltava anotações nas classes @Service</p></br>
+	<p>O metodo de buscar todos os produtos da categoria esta com problema</p></br>
+

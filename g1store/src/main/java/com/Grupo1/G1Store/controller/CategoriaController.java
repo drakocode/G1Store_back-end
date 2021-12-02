@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/categoria")
 public class CategoriaController {
 
-    private CategoriaService categoriaService;
+    private final CategoriaService categoriaService;
 
     //constructor
     //
@@ -33,8 +33,8 @@ public class CategoriaController {
         return ResponseEntity.status(HttpStatus.OK).body(categoriaService.buscarTodos());
     }
 
-    @GetMapping("/categorias/produto")
-    public ResponseEntity<List<Categoria>> buscarTodosProdutosDaCategoria(Categoria categoria){
-        return  ResponseEntity.status(HttpStatus.OK).body(categoriaService.buscarTodosProdutosDaCategoria(categoria));
-    }
+//    @GetMapping("/categorias/produto")
+//    public ResponseEntity<List<Categoria>> buscarTodosProdutosDaCategoria(Categoria categoria){
+//        return  ResponseEntity.status(HttpStatus.OK).body(categoriaService.buscarTodosProdutosDaCategoria(categoria));
+//    }
 }

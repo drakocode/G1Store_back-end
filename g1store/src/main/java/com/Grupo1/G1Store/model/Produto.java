@@ -6,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
-@Component
 @Table(name = "tb_produtos")
 public class Produto {
 

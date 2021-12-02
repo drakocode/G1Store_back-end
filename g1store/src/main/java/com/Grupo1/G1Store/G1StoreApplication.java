@@ -12,6 +12,8 @@ import java.util.List;
 
 @SpringBootApplication
 public class G1StoreApplication {
+	public G1StoreApplication() {
+	}
 	private static ProdutoService produtoService;
 	private static CategoriaService categoriaService;
 
@@ -25,6 +27,7 @@ public class G1StoreApplication {
 
 	static List<Produto> produtos = new ArrayList<>();
 	static List<Categoria> categorias = new ArrayList<>();
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(G1StoreApplication.class, args);
@@ -54,7 +57,7 @@ public class G1StoreApplication {
 		produtos.add(p1);
 		produtos.add(p2);
 
-		produtoService.buscarDadosDoProdutoPorId(1L);
+//		produtoService.buscarDadosDoProdutoPorId(1L);
 		produtoService.cadastrarProduto(p0);
 		produtoService.cadastrarProduto(p1);
 		produtoService.cadastrarProduto(p2);
@@ -62,7 +65,9 @@ public class G1StoreApplication {
 
 		categoriaService.cadastrarNovaCategoria(nuclear);
 		categoriaService.cadastrarNovaCategoria(isotopo);
+
 	}
+
 
 
 }
