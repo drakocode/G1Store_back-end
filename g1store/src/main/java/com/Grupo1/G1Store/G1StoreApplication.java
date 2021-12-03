@@ -67,7 +67,4 @@ public class G1StoreApplication {
 //		categoriaService.cadastrarNovaCategoria(isotopo);
 
 	}
-
-
-
 }

@@ -1,5 +1,6 @@
 package com.Grupo1.G1Store.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.stereotype.Component;
 
@@ -34,11 +35,8 @@ public class Produto {
     //mas não ta salvando o nome, só o id >:((((((((((((((((((((((
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "categoria_id")
+    @JsonIgnoreProperties("produto")
     private Categoria categoria;
-
-    //constructor
-    //
-    //
 
     public Produto() {
     }
@@ -95,7 +93,7 @@ public class Produto {
         this.imagem = imagem;
     }
 
-    public Categoria getCategoria() {
+    public  Categoria getCategoria() {
         return categoria;
     }
 

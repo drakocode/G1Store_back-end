@@ -10,20 +10,11 @@ import java.util.List;
 //@Component
 @Service
 public class CategoriaService {
-    @Autowired
     private CategoriaRepository categoriaRepository;
-    private CategoriaService categoriaService;
     //constructor
     //
     //
-
-    public CategoriaService() {
-    }
-
-    public CategoriaService(CategoriaService categoriaService) {
-        this.categoriaService = categoriaService;
-    }
-
+    @Autowired
     public CategoriaService(CategoriaRepository categoriaRepository) {
         this.categoriaRepository = categoriaRepository;
     }
@@ -31,21 +22,16 @@ public class CategoriaService {
     //methods
     //
     //
-    public List<Categoria> buscarTodos(){
+    public List<Categoria> buscarTodos() {
         return categoriaRepository.findAll();
     }
 
-//    public List<Produto> buscarTodosProdutosDaCategoria(Categoria categoria){
-//
-//
-//
-//        return List<Produto> produtos.findAll().stream()
-//                .filter(produto -> produto.getCategoria().equals(categoria))
-//                .collect(Collectors.toList());
-//    }
-
-    public void cadastrarNovaCategoria(Categoria categoria){
+    public void cadastrarNovaCategoria(Categoria categoria) {
         categoriaRepository.save(categoria);
+    }
+
+    public List<Categoria> buscarPorNome(String nome) {
+        return categoriaRepository.findByNomeContainingIgnoreCase(nome);
     }
 
 }
