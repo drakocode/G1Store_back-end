@@ -72,6 +72,12 @@
 <!--			<artifactId>hibernate-entitymanager</artifactId>-->
 <!--			<version>5.2.3.Final</version>-->
 <!--		</dependency>-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.0.1-jre</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

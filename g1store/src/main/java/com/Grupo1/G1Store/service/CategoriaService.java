@@ -3,7 +3,6 @@ package com.Grupo1.G1Store.service;
 import com.Grupo1.G1Store.model.Categoria;
 import com.Grupo1.G1Store.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,11 +35,17 @@ public class CategoriaService {
         return categoriaRepository.findAll();
     }
 
-//    public List<Categoria> buscarTodosProdutosDaCategoria(Categoria categoria){
-//        return categoriaRepository.buscarTodosProdutos();
+//    public List<Produto> buscarTodosProdutosDaCategoria(Categoria categoria){
+//
+//
+//
+//        return List<Produto> produtos.findAll().stream()
+//                .filter(produto -> produto.getCategoria().equals(categoria))
+//                .collect(Collectors.toList());
 //    }
 
-    public Categoria cadastrarNovaCategoria(Categoria categoria){
-        return categoriaRepository.save(categoria);
+    public void cadastrarNovaCategoria(Categoria categoria){
+        categoriaRepository.save(categoria);
     }
+
 }

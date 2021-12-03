@@ -14,57 +14,57 @@ import java.util.List;
 public class G1StoreApplication {
 	public G1StoreApplication() {
 	}
-	private static ProdutoService produtoService;
-	private static CategoriaService categoriaService;
+//	private static ProdutoService produtoService;
+//	private static CategoriaService categoriaService;
+//
+//	public G1StoreApplication(ProdutoService produtoService) {
+//		this.produtoService = produtoService;
+//	}
+//
+//	public G1StoreApplication(CategoriaService categoriaService) {
+//		this.categoriaService=categoriaService;
+//	}
 
-	public G1StoreApplication(ProdutoService produtoService) {
-		this.produtoService = produtoService;
-	}
-
-	public G1StoreApplication(CategoriaService categoriaService) {
-		this.categoriaService=categoriaService;
-	}
-
-	static List<Produto> produtos = new ArrayList<>();
-	static List<Categoria> categorias = new ArrayList<>();
+//	static List<Produto> produtos = new ArrayList<>();
+//	static List<Categoria> categorias = new ArrayList<>();
 
 
 	public static void main(String[] args) {
 		SpringApplication.run(G1StoreApplication.class, args);
 		//
-		Categoria nuclear=new Categoria("Nuclear");
-		Categoria isotopo=new Categoria("Isotopo");
+//		Categoria nuclear=new Categoria("Nuclear");
+//		Categoria isotopo=new Categoria("Isotopo");
+//
+//
+//
+//		Produto p0=new Produto("uranio", 5555.0,"uranio enriquecido com alta volatilidade","img",nuclear);
+//
+//		Produto p1=new Produto("protio", 5555.0,"uranio enriquecido com alta volatilidade","img",isotopo);
+//		Produto p2=new Produto("tritio", 5555.0,"uranio enriquecido com alta volatilidade","img",isotopo);
+//		Produto p3=new Produto("deuterio", 5555.0,"uranio enriquecido com alta volatilidade","img",isotopo);
+//
 
 
 
-		Produto p0=new Produto("uranio", 5555.0,"uranio enriquecido com alta volatilidade","img",nuclear);
-
-		Produto p1=new Produto("protio", 5555.0,"uranio enriquecido com alta volatilidade","img",isotopo);
-		Produto p2=new Produto("tritio", 5555.0,"uranio enriquecido com alta volatilidade","img",isotopo);
-		Produto p3=new Produto("deuterio", 5555.0,"uranio enriquecido com alta volatilidade","img",isotopo);
 
 
 
 
-
-
-
-
-		categorias.add(nuclear);
-		categorias.add(isotopo);
-
-		produtos.add(p0);
-		produtos.add(p1);
-		produtos.add(p2);
+//		categorias.add(nuclear);
+//		categorias.add(isotopo);
+//
+//		produtos.add(p0);
+//		produtos.add(p1);
+//		produtos.add(p2);
 
 //		produtoService.buscarDadosDoProdutoPorId(1L);
-		produtoService.cadastrarProduto(p0);
-		produtoService.cadastrarProduto(p1);
-		produtoService.cadastrarProduto(p2);
-		produtoService.cadastrarProduto(p3);
-
-		categoriaService.cadastrarNovaCategoria(nuclear);
-		categoriaService.cadastrarNovaCategoria(isotopo);
+//		produtoService.cadastrarProduto(p0);
+//		produtoService.cadastrarProduto(p1);
+//		produtoService.cadastrarProduto(p2);
+//		produtoService.cadastrarProduto(p3);
+//
+//		categoriaService.cadastrarNovaCategoria(nuclear);
+//		categoriaService.cadastrarNovaCategoria(isotopo);
 
 	}
 

@@ -1,8 +1,10 @@
 package com.Grupo1.G1Store.model;
 
+import org.hibernate.validator.constraints.Range;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -16,7 +18,10 @@ public class Produto {
     @Size(min = 3, max = 255)
     private String nome;
 
-    @Size(min = 1)
+    //size só funciona pra string
+    //pra valores numericos usa @Range
+    @Column(name= "preco")
+    @Range(min=0)
     private Double preco;
 
     @Size(min = 3, max = 255)
@@ -25,7 +30,9 @@ public class Produto {
     @Size(min = 3, max = 255)
     private String imagem;
 
-    @ManyToOne
+    //esse cascade faz a categoria ser criada e salva se não existir na hora que o produto for cadastrado
+    //mas não ta salvando o nome, só o id >:((((((((((((((((((((((
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
