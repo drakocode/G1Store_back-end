@@ -34,4 +34,8 @@ public class CategoriaService {
         return categoriaRepository.findByNomeContainingIgnoreCase(nome);
     }
 
+    public Categoria buscarPorId(Long id){
+        return categoriaRepository.findById(id).get();
+    }
+
 }

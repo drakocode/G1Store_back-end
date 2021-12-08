@@ -25,17 +25,17 @@ public class Produto {
     @Range(min=0)
     private Double preco;
 
-    @Size(min = 3, max = 255)
+    @Size(min = 3)
     private String descricao;
 
-    @Size(min = 3, max = 255)
+    @Size(min = 3)
     private String imagem;
 
     //esse cascade faz a categoria ser criada e salva se não existir na hora que o produto for cadastrado
     //mas não ta salvando o nome, só o id >:((((((((((((((((((((((
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "categoria_id")
-    @JsonIgnoreProperties("produto")
+    @JsonIgnoreProperties("produtos")
     private Categoria categoria;
 
     public Produto() {

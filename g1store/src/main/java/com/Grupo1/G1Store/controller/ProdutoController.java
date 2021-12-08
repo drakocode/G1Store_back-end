@@ -14,7 +14,7 @@ import java.util.List;
 
 @CrossOrigin("http://localhost:3000")
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 public class ProdutoController {
     private final ProdutoService produtoService;
     private final CategoriaService categoriaService;
@@ -51,8 +51,8 @@ public class ProdutoController {
         return ResponseEntity.status(HttpStatus.OK).body(categoriaService.buscarTodos());
     }
 
-    @GetMapping("/categorias/{nome}")
-    public ResponseEntity <List<Categoria>> buscarTodosPorNome(@PathVariable String nome ){
-        return ResponseEntity.status(HttpStatus.OK).body(categoriaService.buscarPorNome(nome));
+    @GetMapping("/categorias/{id}")
+    public ResponseEntity <Categoria> buscarPorId (@PathVariable Long id ){
+        return ResponseEntity.status(HttpStatus.OK).body(categoriaService.buscarPorId(id));
     }
 }
